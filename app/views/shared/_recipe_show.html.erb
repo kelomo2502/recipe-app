@@ -1,0 +1,59 @@
+<section class="container">
+  <h1 class="text-center mb-5"><%= recipe.name %></h1>
+  <span class="badge badge-primary">Private</span>
+  <div class="recipe-info d-flex justify-content-around">
+    <div>
+      <h5>Preparation time: <%= recipe.preparation_time %></h5>
+      <h5>Cooking time: <%= recipe.cooking_time %></h5>
+      <div>
+        <h3 class="mt-5">Description</h3>
+        <p><%= recipe.description %></p>
+      </div>
+    </div>
+    <div class="recipe-stat">
+      <% if recipe.public %>
+      <span class="btn btn-warning">Public</span>
+      <% else %>
+      <span class="btn btn-primary">Private</span>
+      <% end %>
+    </div>
+  </div>
+  <div class="mt-5 d-flex justify-content-around">
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#recipeModal"
+    >
+      <%= link_to "Generate shopping list", general_shopping_list_path %>
+    </button>
+    <% if can?(:update, recipe) %> <%= link_to "Add ingredient", foods_path,
+    class: "btn btn-danger" %> <% end %>
+  </div>
+  <table class="table table-bordered m-5 w-75 food-table">
+    <thead>
+      <tr>
+        <th scope="col">Food</th>
+        <th>Measurement unit</th>
+        <th>Unit price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if @foods.nil? %>
+      <h3>the list is empty</h3>
+      <% else %> <% @foods.each do |food|%>
+      <tr>
+        <td><%= food.name%></td>
+        <td><%= food.measurement_unit%></td>
+        <td>$ <%= food.price%></td>
+        <td>
+          <%= button_to 'delete', food_path(food.id), method: :delete,
+          class:"btn btn-warning"%>
+        </td>
+      </tr>
+      <%end%>
+    </tbody>
+    <% end %>
+  </table>
+</section>

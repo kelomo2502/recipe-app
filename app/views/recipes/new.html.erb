@@ -1,0 +1,33 @@
+<section class=" d-flex flex-column justify-content-center px-5  w-50 section pb-5 pt-3">
+  <h1 class="text-center">New Recipe</h1>
+
+  <%= form_with model: @recipe do |f|%>
+
+  <div class="mb-1">
+    <%= f.label :name %> <br />
+    <%= f.text_field :name, autofocus: true,placeholder: 'Recipe Name', class:"form-control input" %>
+  </div>
+
+  <div class="mb-1">
+    <%= f.label :preparation_time %> <br />
+    <%= f.text_field :preparation_time, placeholder: 'preparation_time' ,class:"form-control input" %>
+  </div>
+
+  <div class="mb-1">
+    <%= f.label :cooking_time %> <br />
+    <%= f.text_field :cooking_time, placeholder: 'cooking_time', class:"form-control input" %>
+  </div>
+
+  <div class="mb-1">
+    <%= f.label :description %> <br />
+    <%= f.text_field :description, placeholder: 'description', class:"form-control" %>
+  </div>
+
+
+  <div class="actions mt-3"><%= f.submit "Add Recipe", class:"button" %></div>
+
+  <% end %>
+  <br />
+
+  <div class="link recipe"><%= link_to "Back to Recipes", recipes_path %></div>
+</section>
