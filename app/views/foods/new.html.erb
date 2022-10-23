@@ -1,0 +1,28 @@
+<section class=" d-flex flex-column justify-content-center px-5  w-50 section pt-3" >
+  <h1 class="text-center mb-5">New food</h1>
+
+  <%= form_with model: @food do |f|%>
+
+  <div class="mb-3 px-5">
+    <%= f.label :name %> <br />
+    <%= f.text_field :name, autofocus: true,placeholder: 'Food Name',class:"form-control" %>
+  </div>
+
+  <div class="mb-3 px-5">
+    <%= f.label :measurement_unit %> <br />
+    <%= f.text_field :measurement_unit, placeholder: 'Measurement Unit', class:"form-control" %>
+  </div>
+
+  <div class="mb-3 px-5">
+    <%= f.label :price %> <br />
+    <%= f.text_field :price, placeholder: 'Price', class:"form-control" %>
+  </div>
+
+  <div class="mb-3 px-5"><%= f.submit "Add Food", class:"button" %></div>
+
+  <% end %>
+  <br />
+
+  <div class="mb-3 px-5"><%= link_to "Back to foods", foods_path %></div>
+
+</section>

@@ -1,0 +1,8 @@
+<section class="public-recipes">
+  <h1 class="text-center">Public Recipes</h1>
+  <div class="recipes-box">
+    <% @recipes.each do |recipe| %> 
+    <%= render('card', recipe:) %>
+    <% end %>
+  </div>
+</section>

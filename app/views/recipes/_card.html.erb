@@ -1,0 +1,12 @@
+<div>
+  <h3>
+    <div class="recipe-name">
+      <%= link_to(recipe.name, recipe_path(recipe.id)) %>
+    </div>
+  </h3>
+  <div>
+    <p><%= recipe.description %></p>
+  </div>
+</div>
+<%= button_to "Delete", recipe_path(recipe.id), method: :delete, class:"btn
+btn-warning mb-3" %>

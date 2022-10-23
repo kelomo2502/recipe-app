@@ -1,15 +1,180 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    'Lucida Sans',
+    'Lucida Sans Regular',
+    'Lucida Grande',
+    'Lucida Sans Unicode',
+    Geneva,
+    Verdana,
+    sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  color: #4a7856;
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.h1 {
+  margin-top: 10px;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.recipes a {
+  text-decoration: none;
+}
+
+.recipes-new a {
+  text-decoration: none;
+}
+
+.section {
+  border-radius: 8px;
+  background: #4a7856;
+  color: #fff;
+  box-shadow: 3px 2px 3px #222;
+}
+
+.button {
+  margin-top: 5px;
+  border-radius: 3px;
+  border: 1px solid gray;
+  padding: 5px 10px;
+  box-shadow: 3px 2px 3px #222;
+}
+
+.recipe-name a {
+  color: #fff;
+}
+
+.recipe-bg {
+  background: #4a7856;
+  color: #fff;
+  border-radius: 8px;
+  margin-top: 24px;
+  box-shadow: 3px 2px 3px #222;
+  min-width: 500px;
+}
+
+.with-border {
+  border: 2px solid #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 3px 2px 3px #222;
+}
+
+.recipe-page {
+  min-height: 100vh;
+}
+
+.food-page {
+  background: #4a7856;
+  min-width: 500px;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 3px 2px 3px #222;
+}
+
+.food-header {
+  background: #4a7856;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 3px 2px 3px #222;
+}
+
+.food-table {
+  background: #4a7856;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 3px 2px 3px #222;
+}
+
+.navbar-custom {
+  background: #4a7856;
+}
+
+.navbar-custom a {
+  color: #fff;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.alert {
+  position: relative;
+  padding: 1rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  text-align: center;
+  top: 77px;
+  margin-bottom: 75px;
+  color: #4a7856;
+}
+
+.sign-out-link-btn {
+  border: 2px solid #4a7856;
+  padding: 5px 8px;
+  background: #4a7856;
+  border-radius: 5px;
+  box-shadow: 3px 2px 3px #222;
+}
+
+.recipe-details p {
+  color: #4a7856;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.add-ingredient-btn,
+.generate-btn {
+  color: #fff;
+  background: #4a7856;
+  border: 2px solid #4a7856;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 3px 2px 3px #222;
+}
+
+.generate-btn {
+  margin-right: 10px;
+}
+
+.all-recipes {
+  margin-top: 20px;
+}
+
+.all-recipes a {
+  color: #4a7856;
+}
+
+.public-recipe-card {
+  border: 2px solid #4a7856;
+  padding: 8px 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 3px 2px 3px #222;
+  min-width: 500px;
+}
+
+.public-recipe-card h3 a {
+  color: #4a7856;
+  font-size: 1.5rem;
+}
